@@ -1,0 +1,13 @@
+body{
+  background-image: url(./media/background.jpg);
+  background-repeat: no-repeat;
+
+  background-color: green;
+}
+div{
+    margin-left: 200px;
+    margin-top: 150px;
+  background-color: yellow;
+  border: 6px dotted red;
+
+}

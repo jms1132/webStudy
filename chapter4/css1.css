@@ -1,0 +1,64 @@
+p#block-align {
+  border: 3px dotted red;
+  width: 50%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+div {
+  border: 30px solid transparent;
+  width: 330px;
+  height: 30px;
+  border-image: url(../chapter5/media/border.png) 30 30 round;
+}
+
+@@font-face {
+  font-family: "Vera Serif Bold";
+  src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+}
+
+h3 {
+  font-family: "VeraSeBd", serif;
+}
+
+a:link {
+  text-decoration: line-through;
+  color: black;
+  background-color: blue;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: purple;
+}
+
+body {
+  display: block;
+  margin: 0px;
+  background-image: url(../chapter5/media/back1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* 기본 사이즈를 안주면 12픽셀인데 값을 주게 되면 기본값이 설정된다 */
+}
+
+/* p {
+  background-color: #123456;
+  border: 2px dotted lightblue;
+} */
+
+h1 {
+  background-color: yellow;
+  border: 2px solid red;
+}

@@ -1,0 +1,18 @@
+h1, h2 {
+  font-family: serif;
+  font-size: 25pt;
+  color: green;
+}
+
+strong, em {
+  font-family: italic;
+  font-size: 15pt;
+  color: orange;
+}
+
+li.li-group {
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  font-size: 18pt;
+  color: red;
+}
