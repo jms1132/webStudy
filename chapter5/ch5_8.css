@@ -1,0 +1,41 @@
+table {
+  background-color: yellow;
+  border: 3px solid black;
+  text-align: center;
+  empty-cells: hide;
+  font-weight: bold;
+}
+
+td.td_5 {
+  background-color: yellow;
+}
+
+td {
+  background-color: red;
+  border: 3px solid black;
+}
+
+a:link {
+  font-size: 30px;
+  color: green;
+  text-decoration: none;
+  background-color: black;
+}
+
+a:hover {
+  font-size: 30px;
+  color: pink;
+  background-color: black;
+}
+
+a:visited {
+  font-size: 30px;
+  color: orange;
+  background-color: black;
+}
+
+a:active {
+  font-size: 30px;
+  color: yellow;
+  background-color: black;
+}

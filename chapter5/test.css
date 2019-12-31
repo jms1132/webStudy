@@ -1,0 +1,22 @@
+ul li {
+  display: inline;
+  padding-left: 14px;
+  padding-right: 14px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+ul {
+  text-align: center;
+  border-top: 2px dotted red;
+  border-bottom: 2px dotted red;
+  padding: 10px;
+}
+
+ul>li>a {
+  text-decoration: none;
+  color: black;
+}
+ul>li>a:hover {
+  color: red;
+}
