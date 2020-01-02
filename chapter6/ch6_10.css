@@ -1,0 +1,28 @@
+#header1{
+  background-color: yellow;
+  width: 300px;
+  height: 30px;
+}
+#nav1{
+  background: red;
+  width: 300px;
+  height: 60px;
+}
+#aside1{
+  float: left;
+  width: 100px;
+  height: 180px;
+  background: blue;
+}
+#aside2{
+  float: left;
+  width: 100px;
+  height: 180px;
+  background: green;
+}
+#aside3{
+  float: left;
+  width: 100px;
+  height: 180px;
+  background: purple;
+}

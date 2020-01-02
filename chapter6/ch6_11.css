@@ -1,0 +1,38 @@
+#div_11 {
+  background: red;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: 2s move;
+  animation-iteration-count: 10;
+}
+
+@keyframes move {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 100px;
+    top: 0px;
+    background: yellow;
+  }
+
+  50% {
+    left: 100px;
+    top: 100px;
+    background: green;
+  }
+
+  75% {
+    left: 0px;
+    top: 100px;
+    background: blue;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}

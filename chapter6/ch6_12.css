@@ -1,0 +1,10 @@
+div{
+  position: absolute;
+
+}
+div.sentence{
+  text-shadow: 4px 4px 4px black;
+  color: purple;
+  font-size: 50px;
+  font-style: italic;
+}

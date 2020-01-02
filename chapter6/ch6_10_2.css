@@ -1,0 +1,50 @@
+#header1 {
+  background: yellow;
+  width: 300px;
+  height: 30px;
+}
+
+#nav1 {
+  background: red;
+  width: 300px;
+  height: 30px;
+}
+
+#section1 {
+  float: left;
+}
+
+#article1 {
+  background: blue;
+  width: 150px;
+  height: 150px;
+}
+
+#article2 {
+  background: green;
+  width: 150px;
+  height: 150px;
+}
+
+#section2 {
+  float: left;
+}
+
+#article3 {
+  background: orange;
+  width: 150px;
+  height: 150px;
+}
+
+#article4 {
+  background: gray;
+  width: 150px;
+  height: 150px;
+}
+
+#footer1 {
+  width: 300px;
+  height: 60px;
+  background: pink;
+  clear: both;
+}

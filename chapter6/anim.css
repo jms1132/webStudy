@@ -1,0 +1,39 @@
+#div_ball {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50px;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from, to {
+    bottom: 0px;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    background: yellow;
+    bottom: 650px;
+    animation-timing-function: ease-in;
+  }
+}
+#div_no9{
+  background: red;
+  width: 100px;
+  height: 100px;
+  transition: width 3s, height 3s, transform 3s;
+}
+#div_no9:hover{
+  width: 200px;
+  height: 200px;
+  background: yellow;
+  transform: rotate(360deg);
+}
+pre{
+  font-size: 25px;
+  font-weight: bold;
+}
