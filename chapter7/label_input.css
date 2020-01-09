@@ -1,0 +1,14 @@
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+input {
+  display: inline-block;
+  width: 160px;
+}
+
+body {
+  height: 100%;
+  background-color: #f3f1e9;
+}

@@ -1,0 +1,419 @@
+body {
+  margin: 0;
+}
+
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* start of header ====================================================*/
+header {
+  background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.div-center {
+  width: 1100px;
+  /* border: 1px dotted gray; */
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+header #junior-naver {
+  display: inline-block;
+  width: 58px;
+  height: 11px;
+  background-position: 0 -158px;
+  background-image: url(./image/sp_main_v191212.png);
+  background-repeat: no-repeat;
+}
+
+header #junior-naver:hover {
+  display: inline-block;
+  width: 58px;
+  height: 11px;
+  background-position: -68px -158px;
+  background-image: url(./image/sp_main_v191212.png);
+  background-repeat: no-repeat;
+}
+
+#header-start {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+#header-start a {
+  text-decoration: none;
+  font-size: 11px;
+  color: gray;
+  letter-spacing: 1px;
+  margin-right: 5px;
+}
+
+#header-start a:hover {
+  text-decoration: underline;
+}
+
+#header-start #hover-none:hover {
+  text-decoration: none;
+}
+
+header #naver-image {
+  display: inline-block;
+  width: 147px;
+  height: 55px;
+  background-position: -61px -20px;
+  background-image: url(./image/logo.png);
+  background-repeat: no-repeat;
+  text-decoration: none;
+  position: relative;
+  left: 2px;
+  top: 4px;
+}
+
+#header-search {
+  /* border: 2px solid gray; */
+  vertical-align: middle;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#header-search fieldset {
+  display: inline-block;
+  padding-top: 9px;
+  width: 521px;
+  height: 49px;
+  border: 2px solid #03cf5d;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+  top: -18px;
+  left: 5px;
+}
+
+#header-search fieldset input {
+  width: 390px;
+  border: 0;
+  outline: none;
+}
+
+#header-search fieldset button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  background: #03cf5d;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#header-search #search-image {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-position: -196px 2px;
+  background-image: url(./image/sp_main_v191212.png);
+  background-repeat: no-repeat;
+  margin-top: 4px;
+}
+
+/* end of header ==========================================================*/
+nav {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#nav-center {
+  width: 1100px;
+  height: 40px;
+  /* border: 1px dotted gray; */
+  margin: 0 auto;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  color: #03cf5d;
+}
+
+nav ul#first-five li a {
+  color: #03cf5d;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+}
+
+nav #nav-ranking {
+  /* display: inline-block; */
+  float: right;
+  display: inline-block;
+  width: 220px;
+  height: 40px;
+  margin-right: 10px;
+  position: relative;
+}
+
+nav #nav-ranking ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 332px;
+  height: 334px;
+  background-color: white;
+  border: 2px solid lightgray;
+  position: absolute;
+  display: none;
+  top: -15px;
+  left: -118px;
+}
+nav #nav-ranking:hover ul {
+  display: inline-block;
+}
+
+#nav-ranking ul li {
+  display: block;
+  color: black;
+}
+
+nav #hot-keyword {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  display: inline-block;
+}
+
+/* end of nav ============================================================ */
+main {
+  background: #f2f2f2;
+  padding-top: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#main-center {
+  margin: 0 auto;
+  width: 1100px;
+}
+
+#main-banner-login {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+#main-banner {
+  /* display: inline-block; */
+  width: 740px;
+  height: 120px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  margin-right: 10px;
+  float: left;
+}
+
+#main-login {
+  /* display: inline-block; */
+  width: 332px;
+  height: 120px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  float: left;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+#main-login .lg_local_text {
+  color: #888888;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+#main-news-section {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+#main-headline {
+  width: 740px;
+  height: 308px;
+  float: left;
+  margin-right: 13px;
+}
+
+#main-news-header {
+  width: 740px;
+  height: 46px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+#main-newstand {
+  width: 740px;
+  height: 249px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  display: inline-block;
+  ;
+}
+
+#main-newstand h3 {
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  border: 1px solid #f2f2f2;
+}
+
+#main-newstand ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-newstand ul li {
+  float: left;
+  width: calc(100%/ 6);
+  height: 67px;
+  border: 1px solid #f2f2f2;
+  border-bottom: : 1px solid #f2f2f2;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#main-newstand ul li:hover {
+  float: left;
+  width: calc(100%/ 6);
+  height: 67px;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-bottom: : 1px solid #f2f2f2;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#main-newstand ul li img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#main-weather {
+  width: 332px;
+  height: 308px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  float: left;
+}
+
+#main-contents {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+#main-category {
+  width: 740px;
+  height: 884px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  margin-right: 10px;
+  float: left;
+}
+
+#main-shopping {
+  width: 332px;
+  height: 884px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  float: left;
+}
+
+#main-bottom {
+  padding-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+#main-adfirst {
+  width: 740px;
+  height: 130px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  float: left;
+  margin-right: 10px;
+}
+
+#main-adsecond {
+  width: 332px;
+  height: 130px;
+  border: 1px solid #f2f2f2;
+  background-color: white;
+  float: left;
+}
+
+/* end of main ===================================*/
+#footer-block-first, #footer-block-second {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#footer-notice {
+  width: 1080px;
+  height: 45px;
+}
+
+#footer-notice, #footer-aside, #footer-address {
+  margin: 0 auto;
+  width: 1100px;
+}
+
+#footer-notice-content {
+  width: 1080px;
+  height: 45px;
+}
+
+#footer-aside-content {
+  width: 1080px;
+  height: 110px;
+}
+
+#footer-address-content {
+  width: 1080px;
+  height: 156px;
+}
+
+#main-login .login-image {
+  width: 280px;
+  height: 37px;
+  background-position: 0 -50px;
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_login_v180727.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+}

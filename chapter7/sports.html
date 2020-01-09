@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>민지 웹페이지</title>
+  <link rel="stylesheet" href="./website.css">
+</head>
+
+<body>
+  <header id="header">
+    <h1><img id="header_img" src="./media/shop.png" /><a href="#">Web Shop</a></h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">My Account</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+  </nav>
+  <aside id="aside_left">
+    <h3 id=category>카테고리</h3>
+    <ul>
+      <li><a href="computer.html" target="_top">컴퓨터</a></li>
+      <li><a href="clothes.html" target="_top">의류</a></li>
+      <li><a href="music.html" target="_top">음악</a></li>
+      <li><a href="movie.html" target="_top">영화</a></li>
+      <li><a href="sports.html" target="_top">스포츠/레저</a></li>
+      <li><a href="#" target="iframe1">가구/인테리어</a></li>
+      <li><a href="#" target="iframe1">식품</a></li>
+    </ul>
+  </aside>
+  <section id="main_section">
+    <article id="article1" name="article1">
+      <div id="product1">
+        <img src="./media/skating.png" width="100" height="100" alt="">
+        <p>날렵하고 날씬하고 몸이 재빨라야만 가능한 많은 국민들의 사랑을 받는 김연아 선수가 제일 잘하는 운동인 스케이팅</p>
+        <input type="button" name="" value="쇼핑카트에 추가하기">
+      </div>
+      
+    </article>
+  </section>
+  <aside id="aside_right">
+    <div id="shopping_cart">
+      <h4>Shopping Cart</h4>
+      현재 쇼핑카트에 물품이 없습니다.<br>
+      <a href="#">쇼핑카트 보기</a>
+    </div>
+    <div id="login">
+      <h4>Log In</h4>
+      <form action="index.html" method="post">
+        아이디 <input type="text" name="" value=""><br>
+        패스워드 <input type="password" name="" value=""> <br>
+        <input type="submit" name="submit" value="로그인">
+        <input type="reset" name="reset" value="초기화">
+        <br>
+        <a href="label_input.html" target="_parent" id="register">회원가입</a>
+        <a href="#" id="forgot">비밀번호 분실</a>
+      </form>
+    </div>
+  </aside>
+  <footer>Copyright (c) 2013 Web Shop</footer>
+</body>
+
+</html>
