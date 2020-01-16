@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var array = [10, 7, 23, 99, 169, 19, 11, 1];
+      array.sort();
+      document.write(array + "<br/><br/>");
+      array.sort(function (a, b) {
+        return a - b;
+      });
+      document.write(array + "<br/><br/>");
+      var array2 = [1,2,3,4,5,6,7,8,9,10];
+      var newArray2 = array2.slice(5);
+      document.write(newArray2 + "<br/><br/>");
+
+      var fruits = ["apple","banana","peach"];
+      var s = fruits.join(", ");
+      document.write(s + "<br/><br/>");
+    </script>
+  </body>
+</html>

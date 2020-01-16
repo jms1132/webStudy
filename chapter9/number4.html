@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    function example4() {
+      var i = 0;
+      var j = 0;
+      var cTime = new Date().getTime();
+
+      for (i = 0; i <= 1000000; i++) {
+        j += i;
+      }
+      var cTime2 = new Date().getTime();
+      var result = cTime2 - cTime;
+
+      document.write(result + "밀리초가 걸렸음!");
+    }
+    example4();
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

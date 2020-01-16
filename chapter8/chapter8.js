@@ -107,15 +107,3 @@ function example13() {
       alert("알수없는 학점입니다.")
   }
 }
-
-function example14() {
-
-}
-
-function example02() {
-
-}
-
-function example02() {
-
-}
