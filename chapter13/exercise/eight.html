@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    #myDiv {
+      border: 1px solid red;
+      width: 400px;
+      height: 200px;
+    }
+
+    #myButton {
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+    }
+  </style>
+  <script type="text/javascript">
+    function handleDragStart(e) {
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData("btn", e.target.id);
+    }
+
+    function allowDrop(e) {
+      e.preventDefault();
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      var src = e.dataTransfer.getData("btn");
+      e.target.appendChild(document.getElementById(src))
+    }
+  </script>
+</head>
+
+<body id="body" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+  <div id="myDiv" ondrop="handleDrop(event)" ondragover="allowDrop(event)"></div>
+  <button id="myButton" draggable="true" ondragstart="handleDragStart(event)">Drag me</button>
+
+</body>
+
+</html>

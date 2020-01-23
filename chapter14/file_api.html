@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    function readFile() {
+      //1. 웹브라우저가 File과 FileReader를 허용하는지 점검해야한다.
+      let $result = document.getElementById("result");
+      if (!window.File || !window.FileReader) {
+        $result.value = "File API가 지원되지 않습니다.";
+        return;
+      }
+      //2. 파일객체를 가져온다.
+      let $files = document.getElementById('input').files;
+      //3. 파일 존재여부 점검
+      if ($files.length === 0) {
+        window.alert('파일을 선택하시오.');
+        return;
+      }
+      //4. 파일을 읽어야하는데, 먼저 파일리더 객체를 만들어야한다.
+      let fileReader= new FileReader();
+      //5. 파일을 읽어보자.
+      fileReader.readAsText($files[0], "euc-kr");
+      //6. 자바스크립트 로드는 비동기 처리방식인다. 그래서 핸들러기능을 부여해야한다.
+      fileReader.onload = function(){
+        $result.value = fileReader.result;
+      };
+      $result.value = "내가 먼저 했어요"
+    }
+  </script>
+</head>
+
+<body>
+  <input type="file" id="input" name="input" multiple="multiple">
+  <button id="readFile" onclick="readFile();">파일 읽기</button><br>
+  <textarea id="result" rows="6" cols="60"></textarea>
+</body>
+
+</html>

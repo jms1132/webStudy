@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+</head>
+
+<body>
+  <br>
+  <br>
+  문제2.<br>
+  <canvas id="mycanvas" width="300" height="300" style="border: 1px solid red;"></canvas>
+  <script>
+    var canvas = document.getElementById("mycanvas");
+    var context = canvas.getContext("2d");
+    context.fillStyle = "#000000";
+    context.fillRect(50, 50, 100, 200);
+  </script>
+  <br>
+  <br>
+  문제3.<br>
+  <canvas id="mycanvas2" width="300" height="300" style="border: 1px solid red; margin:5px;padding:5px;"></canvas>
+  <script>
+    var canvas2 = document.getElementById("mycanvas2");
+    var context2 = canvas2.getContext('2d');
+
+    context2.beginPath();
+    context2.moveTo(0, 0);
+    context2.lineTo(50, 50);
+    context2.lineTo(100, 0);
+    context2.lineTo(150, 50);
+    context2.lineTo(200, 0);
+    context2.lineTo(250, 50);
+    context2.lineTo(300, 0);
+    context2.stroke();
+  </script>
+  <br>
+  <br>
+  문제4.<br>
+  <canvas id="mycanvas3" width="300" height="300" style="border: 1px solid red; "></canvas>
+  <script>
+    var canvas3 = document.getElementById("mycanvas3");
+    var context3 = canvas3.getContext('2d');
+
+    var image = new Image();
+    image.src = "./boksunphoto.jpg";
+
+    image.onload = function() {
+      context3.drawImage(image, 0, 0);
+    };
+  </script>
+
+</body>
+
+</html>

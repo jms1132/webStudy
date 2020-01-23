@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+
+    #div_login {
+      margin-top: 20%;
+      margin-left: 40%;
+      margin-right: 50%;
+      margin-bottom: 20%;
+      width: 50%;
+
+    }
+
+    h3 {
+      margin: 3px;
+    }
+
+    #typing_info {
+      float: left;
+    }
+
+    #button {
+      margin-top: 3px;
+      height: 68px;
+      width: 100px;
+      border: none;
+      border-radius: 5px;
+      background: red;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      margin-left: 5px;
+
+    }
+
+    .typing {
+      height: 25px;
+      margin: 3px;
+      width: 287px;
+    }
+
+    span {
+      color: red;
+    }
+
+    #notice {
+      border: 1px solid silver;
+      padding: 4px;
+      width: 283px;
+      font-size: 12.5px;
+    }
+
+    #checkbox {
+      width: 287px;
+      margin-top: 10px;
+      margin-left: 3px;
+    }
+
+    button {
+      font-size: 15px;
+
+    }
+
+    #button_find {
+      margin: 3px;
+    }
+
+    #signup {
+      background: gray;
+      border: 2px solid gray;
+      color: white;
+      margin-left : 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="div_login">
+    <h3>로그인</h3>
+    <div id="typing_info">
+      <input class="typing" type="text"> <br> <input type="text" class="typing">
+    </div>
+    <input type="button" height="50px" value="로그인" id="button">
+    <div id="checkbox">
+      <input type="checkbox" value="stay"> 로그인 상태유지 &nbsp <input type="checkbox" value="save"> 아이디 저장
+      <p id="notice">개인정보보호를 위해 <span>개인 PC에서 사용해주세요.</span></p>
+    </div>
+    <div id="button_find">
+      <button type="button">아이디 찾기</button>&nbsp<button type="button">비밀번호 찾기</button>
+      <a href="./personal_project.html"><button type="button" id="signup">회원가입</button></a>
+    </div>
+  </div>
+</body>
+
+</html>

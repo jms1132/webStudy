@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./signup.css">
+  <script src="./signup.js">
+
+  </script>
+</head>
+
+<body>
+  <h2><b>[회원 실명 확인]</b></h2>
+  <form class="" action="index.html" method="post">
+    <table>
+      <tr>
+        <td colspan="2">이용자 본인의 이름 및 주민등록번호를 정확히 입력해주시기 바랍니다.</td>
+      </tr>
+      <tr>
+        <td style="letter-spacing:45">이름</td>
+        <td><input type="text" size="28" id="name" onchange="checkName();"><span id="name_msg">[공백없이 입력하세요.]</span></td>
+      </tr>
+      <tr>
+        <td>주민등록번호</td>
+        <td><input type="text" size="12" id="number1" onchange="checkNumber1();">&nbsp;-&nbsp;
+          <input type="text" size="12" id="number2" onchange="checkNumber2()"></td>
+      </tr>
+      <tr>
+        <td id="td_id" style="letter-spacing:45">아이디</td>
+        <td><input type="text" size="28" id="id" onchange="checkId();" ></td>
+      </tr>
+    </table><br>
+    <div class="">
+      <input type="button" value="등록">
+      <input type="button" value="취소">
+
+    </div>
+  </form>
+</body>
+
+</html>

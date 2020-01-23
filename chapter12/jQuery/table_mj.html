@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <style media="screen">
+    #table_team,
+    #table_team th,
+    #table_team td {
+      border: 1px solid black;
+      align: center;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+  <table id="table_team">
+    <th>이름</th>
+    <th>나이</th>
+  </table>
+
+  <script type="text/javascript">
+    let teamArr = '[' +
+      '{"name" : "kim", "age" : "21"},' +
+      '{"name" : "park", "age" : "31"},' +
+      '{"name" : "hong", "age" : "41"}' +
+      ']';
+    let teamMem = JSON.parse(teamArr);
+
+    const table = document.getElementById("table_team");
+
+    for (let i = 0; i < teamMem.length; i++) {
+      const tr = document.createElement('tr'),
+        tdName = document.createElement('td'),
+        tdAge = document.createElement('td');
+
+      tdName.innerHTML = teamMem[i].name;
+      tdAge.innerHTML = teamMem[i].age;
+
+      tr.appendChild(tdName);
+      tr.appendChild(tdAge);
+      table.appendChild(tr);
+    }
+  </script>
+</body>
+
+</html>

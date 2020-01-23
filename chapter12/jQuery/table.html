@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #table-students, #table-students td, #table-students th {
+            border-collapse: collapse;
+            border: 1px solid gray;
+            padding: 5px;
+            text-align: center;
+        }
+
+        #table-students th {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <table id="table-students">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+        </tr>
+    </table>
+
+    <script>
+        let studentArr ='['
+            +'{"name" : "kim", "age" : "21"},'
+            +'{"name" : "park", "age" : "31"},'
+            +'{"name" : "hong", "age" : "41"}'
+        +']';
+
+        let students = JSON.parse(studentArr);
+
+        // table에 정보 뿌리기
+        const table = document.getElementById("table-students");
+
+        for(let i = 0 ; i < students.length ; i++){
+            const tr = document.createElement('tr'),
+                tdName = document.createElement('td'),
+                tdAge = document.createElement('td');
+
+            tdName.innerHTML = students[i].name;
+            tdAge.innerHTML = students[i].age;
+            tr.appendChild(tdName);
+            tr.appendChild(tdAge);
+
+            table.appendChild(tr);
+        }
+
+        </script>
+</body>
+</html>

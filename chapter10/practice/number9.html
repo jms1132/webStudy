@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        function email()
+        {
+            var status = document.getElementById('msg1');
+            var elem = document.getElementById('email');
+            var exp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,}$/;
+
+            if (elem.value.match(exp))
+                status.innerHTML;
+            else
+                status.innerHTML = "올바른 이메일을 입력하시오!";
+        }
+
+        function phone_num(elem) {
+            var status = document.getElementById('msg');
+            var elem = document.getElementById('phone');
+            var exp = /^\d{3}-\d{4}-\d{4}$/;
+
+            if (elem.value.match(exp))
+                status.innerHTML;
+            else
+                status.innerHTML = "올바른 전화번호를 입력하시오.";
+        }
+
+        function checkPassword()
+        {
+            var min = 6;
+            var max = 8;
+            var status = document.getElementById('msg2');
+            var elem = document.getElementById('password').value;
+
+            if (elem.length >= min && elem.length <= max)
+                status.innerHTML;
+            else
+                status.innerHTML = "비밀번호 다시 입력!";
+        }
+
+        function matchPassword()
+        {
+            var status = document.getElementById('msg3');
+            var elem1 = document.getElementById('password').value;
+            var elem2 = document.getElementById('password1').value;
+
+            if (elem1 == elem2)
+                status.innerHTML;
+            else
+                status.innerHTML = "비밀번호가 맞지 않습니다!";
+        }
+
+    </script>
+
+</head>
+<body>
+    <form>
+
+        <h1>회원 신청서 </h1>
+        <pre>
+이름*               <input type="text" id="name" size="20" ><br />
+성별*               <input type="radio" name="gender" value="g1">남자<input type="radio" name="gender" value="g2">여자<br />
+휴대폰 번호Phone*   <input type="text" id="phone" onkeyup="phone_num()"><em id="msg"> </em><br/>
+이메일*             <input type="text" id="email" onkeyup="email()"><em id="msg1"> </em><br />
+패스워드(6-8 글자)* <input type="password" id="password" onkeyup="checkPassword()"><em id="msg2"> </em><br />
+패스워드 검증       <input type="password" id="password1" onkeyup="matchPassword()"><em id="msg3"> </em><br />
+                   <input type="button" value="제출">   <input type="button" value="지우기">
+</pre>
+    </form>
+</body>
+</html>
