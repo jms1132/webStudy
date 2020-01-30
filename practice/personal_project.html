@@ -5,15 +5,171 @@
   <meta charset="utf-8">
   <title></title>
   <script type="text/javascript">
+    var idValue = false; //아이디 형식체크
+    var doubleIdValue = false; //아이디 중복체크
+    var emailValue = false; //이메일 형식체크
+    var nameValue = false; //이름 형식체크
+    var phoneValue1 = false; //번호1 형식체크
+    var phoneValue2 = false; //번호2 형식체크
+    var phoneValue3 = false; //번호3 형식체크
+    var passwordValue = false; //비밀번호 형식체크
+    var passwordValue1 = false; //비밀번호 중복체크
+    var addressValue = false; //주소 두칸 빈칸체크
+    var postValue = false; //우편번호 두칸 빈칸체크
+
+
+
+    function checkId() { //아이디 형식체크
+      var elem = document.getElementById('id');
+      var exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{4,12}$/;
+      if (elem.value.match(exp)) {
+        idValue = true;
+        return;
+      } else {
+        alert("아이디를 형식에 맞게 입력하시오.(대/소 영문자와 숫자를 포함해서 4~12자입니다.)");
+        elem.value = "";
+        elem.focus();
+      }
+    }
+
+
+    function doubleCheck() { //아이디 중복체크
+      var elem = document.getElementById('id');
+      var exp = "Jms11322";
+      console.log(elem.value);
+      if (elem.value === (exp)) {
+        alert("아이디가 이미 존재합니다.");
+        elem.value = "";
+        elem.focus();
+      } else if (elem.value === "") {
+        alert("아이디를 입력해주세요.");
+      } else {
+        alert("사용가능한 아이디입니다.");
+        doubleIdValue = true;
+        return;
+      }
+    }
+
+
+
     function checkEmail() {
       var elem = document.getElementById('email');
       var exp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,}$/;
       if (elem.value.match(exp)) {
+        emailValue = true;
         return;
       } else {
         alert("올바른 메일 주소를 입력하시오.");
-      elem.value="";
-      elem.focus();
+        elem.value = "";
+        elem.focus();
+      }
+    }
+
+    function checkName() {
+      var elem = document.getElementById('name');
+      var exp = /^[가-힣]{2,4}$/;
+      if (elem.value.match(exp)) {
+        nameValue = true;
+        return;
+      } else {
+        alert("이름을 올바르게 입력하시오.");
+        elem.value = "";
+        elem.focus();
+      }
+    }
+
+    function checkPhone1() {
+      var elem = document.getElementById('phone1');
+      var exp = /^01([0|1|6|7|8|9]?)$/;
+      if (elem.value.match(exp)) {
+        phoneValue1 = true;
+        return;
+      } else {
+        alert("전화번호를 형식에 맞게 입력해주세요.");
+        elem.value = "";
+        elem.focus();
+      }
+    }
+
+    function checkPhone2() {
+      var elem = document.getElementById('phone2');
+      var exp = /^[0-9]{3,4}$/;
+      if (elem.value.match(exp)) {
+        phoneValue2 = true;
+        return;
+      } else {
+        alert("전화번호를 형식에 맞게 입력해주세요.");
+        elem.value = "";
+        elem.focus();
+      }
+    }
+
+    function checkPhone3() {
+      var elem = document.getElementById('phone3');
+      var exp = /^[0-9]{3,4}$/;
+      if (elem.value.match(exp)) {
+        phoneValue3 = true;
+        return;
+      } else {
+        alert("전화번호를 형식에 맞게 입력해주세요.");
+        elem.value = "";
+        elem.focus();
+      }
+    }
+
+    function checkPassword() {
+
+      var elem = document.getElementById('password');
+      var exp = /^(?=.*[a-zA-Z])(?=.*[!@$%^&*])(?=.*[0-9]).{4,12}$/;
+      if (elem.value.match(exp)) {
+        passwordValue = true;
+        return;
+      } else {
+        alert("비밀번호를 형식에 맞게 입력해주세요.");
+        elem.value = "";
+        elem.focus();
+      }
+    }
+
+    function recheck() {
+      var elem = document.getElementById('recheck');
+      var elem2 = document.getElementById('password');
+      if (elem.value.match(elem2.value)) {
+        passwordValue1 = true;
+        alert("비밀번호가 일치합니다.");
+      } else {
+        alert("비밀번호가 틀렸습니다.");
+        elem.value = "";
+        elem.focus();
+      }
+    }
+
+    function done() {
+      if (postValue&& addressValue && idValue && doubleIdValue && emailValue && nameValue && phoneValue1 && phoneValue2 && phoneValue3 && passwordValue && passwordValue1) {
+        alert("가입에 성공했습니다.");
+        window.open("./personal_login.html","_blank");
+      } else {
+        alert("모든 가입조건을 완료해주세요.");
+      }
+    }
+
+    function checkAddress() {
+      var elem1 = document.getElementById('address1');
+      var elem2 = document.getElementById('address2');
+      if ((elem1.value === "") || (elem2.value === "")) {
+        alert("주소를 바르게 입력해주세요.")
+      } else {
+        addressValue = true;
+      }
+    }
+
+    function checkPost() {
+      var elem1 = document.getElementById('post1');
+      var elem2 = document.getElementById('post2');
+      if ((elem1.value === "") || (elem2.value === "")) {
+        alert("우편번호를 바르게 입력해주세요.")
+      } else {
+        postValue = true;
       }
     }
   </script>
@@ -76,18 +232,23 @@
       text-align: center;
       margin-top: 20px;
     }
-    .phoneNum{
-      width : 50px;
+
+    .phoneNum {
+      width: 50px;
     }
-    .address{
+
+    .address {
       width: 400px;
     }
-    .post{
-      width : 60px;
+
+    .post {
+      width: 60px;
     }
-    #email{
-      width : 210px;
+
+    #email {
+      width: 210px;
     }
+
     span {
       font-size: 12px;
     }
@@ -106,43 +267,48 @@
         <table id="table">
           <tr>
             <td class="item">사용자ID <strong class="necessary">*</strong></td>
-            <td><input type="text">&nbsp<button type="button">ID 중복확인</button></td>
+            <td><input type="text" onchange="checkId()" id="id" autocomplete=off>&nbsp
+              <button type="button" onclick="doubleCheck()">ID 중복확인</button></td>
           </tr>
           <tr>
             <td class="item">비밀번호 <strong class="necessary">*</strong></td>
-            <td><input type="text"><span> 4~12자리의 영문,숫자,특수문자(!,@,$,%,^,&,*)만 가능</span></td>
+            <td><input type="text" onchange="checkPassword()" id="password" autocomplete=off><span> 4~12자리의 영문,숫자,특수문자(!,@,$,%,^,&,*)만 가능</span></td>
           </tr>
           <tr>
             <td class="item">비밀번호 확인 <strong class="necessary">*</strong></td>
-            <td><input type="text"></td>
+            <td><input type="text" onchange="recheck()" id="recheck" autocomplete=off></td>
           </tr>
           <tr>
             <td class="item">성명 <strong class="necessary">*</strong></td>
-            <td><input type="text"><span> 띄어쓰기 없이 입력, 반드시 실명이어야 합니다!</span></td>
+            <td><input type="text" onchange="checkName()" id="name" autocomplete=off><span> 띄어쓰기 없이 입력, 반드시 실명이어야 합니다!</span></td>
           </tr>
           <tr>
             <td class="item">E-mail <strong class="necessary">*</strong></td>
-            <td><input type="text" onchange="checkEmail()" id="email"><input type="checkbox" value="agree"><span>메일 수신여부</span><br>
+            <td><input type="text" onchange="checkEmail()" id="email" autocomplete=off>
+              <input type="checkbox" value="agree"><span>메일 수신여부</span><br>
               <p><strong>할인 이벤트정보</strong> 및 할인쿠폰, 관심분야 등 꼭 필요한 정보를 빠르게 받아보실 수 있습니다.</p>
               <p>비밀번호 분실시 E-mail로 확인해 드리니, <strong id="notice">정확한 E-mail주소를 기입</strong>해 주세요.</p>
             </td>
           </tr>
           <tr>
             <td class="item">우편번호 <strong class="necessary">*</strong></td>
-            <td><input type="number" class="post"> - <input type="number" class="post">&nbsp<button type="button">우편번호 검색</button></td>
+            <td><input type="number" class="post" id="post1" autocomplete=off onchange="checkPost()"> -
+              <input type="number" class="post" id="post2" autocomplete=off onchange="checkPost()">&nbsp<button type="button">우편번호 검색</button></td>
           </tr>
           <tr>
             <td class="item">주소 <strong class="necessary">*</strong></td>
-            <td><input type="text" class="address"><br>
-              <input type="text" class="address"></td>
+            <td><input type="text" class="address" id="address1" onchange="checkAddress()" autocomplete=off><br>
+              <input type="text" class="address" id="address2" onchange="checkAddress()" autocomplete=off></td>
           </tr>
           <tr>
             <td class="item">휴대폰번호 <strong class="necessary">*</strong></td>
-            <td><input type="number" class="phoneNum"> - <input type="number" class="phoneNum"> - <input type="number" class="phoneNum"></td>
+            <td><input type="number" class="phoneNum" id="phone1" onchange="checkPhone1()"> -
+              <input type="number" class="phoneNum" id="phone2" onchange="checkPhone2()"> -
+              <input type="number" class="phoneNum" id="phone3" onchange="checkPhone3()"></td>
           </tr>
         </table>
         <div id="done_div">
-          <button type="button" id="done">다음</button>
+          <button type="button" id="done" onclick="done()">다음</button>
         </div>
       </div>
     </div>

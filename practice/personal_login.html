@@ -4,8 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <style media="screen">
+  <script type="text/javascript">
+    function login() {
+      var elem1 = document.getElementById('id_input');
+      var elem2 = document.getElementById('pw_input');
+      var id = "Jms1132";
+      var pw = "a1!!";
 
+      if (elem1.value === (id)) {
+        if (elem2.value !== (pw)) {
+          alert("비밀번호가 틀렸습니다.(a1!!)");
+        } else {
+          alert("로그인 성공!!!!");
+        }
+      } else if (elem1.value !== (id)) {
+        if (elem2.value === (pw)) {
+          alert("아이디가 틀렸습니다.(Jms1132)");
+        } else {
+          alert("존재하지 않는 아이디/비밀번호 입니다.(Jms1132, a1!!)");
+        }
+      }
+    }
+  </script>
+  <style media="screen">
     #div_login {
       margin-top: 20%;
       margin-left: 40%;
@@ -73,7 +94,7 @@
       background: gray;
       border: 2px solid gray;
       color: white;
-      margin-left : 0px;
+      margin-left: 0px;
     }
   </style>
 </head>
@@ -82,9 +103,13 @@
   <div id="div_login">
     <h3>로그인</h3>
     <div id="typing_info">
-      <input class="typing" type="text"> <br> <input type="text" class="typing">
+      <form name="form1" action="./login.php" method="post">
+        <input class="typing" type="text" id="id_input" name="id"> <br>
+        <input type="text" class="typing" id="pw_input" name="password">
+
     </div>
-    <input type="button" height="50px" value="로그인" id="button">
+    <input type="submit" height="50px" value="로그인" id="button" onclick="login()">
+    </form>
     <div id="checkbox">
       <input type="checkbox" value="stay"> 로그인 상태유지 &nbsp <input type="checkbox" value="save"> 아이디 저장
       <p id="notice">개인정보보호를 위해 <span>개인 PC에서 사용해주세요.</span></p>
